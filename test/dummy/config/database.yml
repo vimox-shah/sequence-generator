@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  database: <%= ENV['POSTGRES_DB'] || "sequence_#{ENV['RAILS_ENV']}" %>
+  user: <%= ENV.fetch("POSTGRES_USER") { "common" } %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD") { "CommonTemp123" } %>
+  port: <%= ENV['POSTGRES_PORT'] || 5432 %>
+  host: <%= ENV['POSTGRES_HOST'] || "postgres-sequence" %>
+  pool: <%= ( ENV.fetch("RAILS_MAX_THREADS") { 3 } ).to_i + 2 %>
+  min_messages: DEBUG
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
+  min_messages: ERROR
