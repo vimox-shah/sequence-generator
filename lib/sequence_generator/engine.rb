@@ -9,9 +9,6 @@ module SequenceGenerator
       SequenceGenerator.load_files.each { |file|
         require_relative File.join("../..", file)
       }
-      config.paths["db/migrate"].expanded.each do |expanded_path|
-        Rails.application.config.paths["db/migrate"] << expanded_path
-      end
     end
   end
 end
