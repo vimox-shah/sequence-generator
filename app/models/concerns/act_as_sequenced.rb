@@ -6,7 +6,7 @@ module SequenceGenerator
     extend ActiveSupport::Concern
     DEFAULT_OPTIONS = {
         purpose: 'Sequence',
-        sequential_id: 1,
+        sequential_id: 0,
         start_at: 1
     }.freeze
 
