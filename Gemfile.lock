@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sequence_generator (0.1.12)
+    sequence_generator (0.1.13)
       active_model_serializers (~> 0.10.3)
       activerecord (>= 3.0)
       activesupport (>= 3.0)
@@ -61,7 +61,7 @@ GEM
     case_transform (0.2)
       activesupport
     concurrent-ruby (1.0.5)
-    crass (1.0.3)
+    crass (1.0.4)
     erubi (1.7.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)

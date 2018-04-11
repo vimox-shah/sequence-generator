@@ -39,7 +39,7 @@
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.16.1, rbenv: 2.3.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="case_transform (v0.2, rbenv: 2.3.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.0.5, rbenv: 2.3.3) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.3, rbenv: 2.3.3) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.4, rbenv: 2.3.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.7.1, rbenv: 2.3.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.4.1, rbenv: 2.3.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.0.0, rbenv: 2.3.3) [gem]" level="application" />
