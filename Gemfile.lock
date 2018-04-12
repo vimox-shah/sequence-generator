@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sequence_generator (0.1.13)
+    sequence_generator (0.1.14)
       active_model_serializers (~> 0.10.3)
       activerecord (>= 3.0)
       activesupport (>= 3.0)
