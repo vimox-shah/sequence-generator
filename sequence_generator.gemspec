@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["vimox-shah"]
   s.email       = ["vimox@shipmnts.com"]
   s.homepage    = "https://github.com/vimox-shah/sequence_generator"
-  s.summary     = "fsdfds"
-  s.description = "sfsfds"
+  s.summary     = "This is for Sequence generation"
+  s.description = "You can create sequence for specific purpose with unique scope"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
