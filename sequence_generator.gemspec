@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = SequenceGenerator::VERSION
   s.authors     = ["vimox-shah"]
   s.email       = ["vimox@shipmnts.com"]
-  s.homepage    = "https://github.com/vimox-shah/sequence_generator"
+  s.homepage    = "https://github.com/vimox-shah/sequence-generator"
   s.summary     = "This is for Sequence generation"
   s.description = "You can create sequence for specific purpose with unique scope"
   s.license     = "MIT"
