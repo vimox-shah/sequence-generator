@@ -24,7 +24,7 @@ module SequenceGenerator
           mattr_accessor :sequenced_options, instance_accessor: false
           self.sequenced_options = []
         end
-        before_validation :set_sequential_ids
+        before_create :set_sequential_ids
         options = DEFAULT_OPTIONS.merge(options)
         column_name = options[:column]
         purpose = options[:purpose]

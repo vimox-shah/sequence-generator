@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sequence_generator (0.1.17)
+    sequence_generator (0.1.19)
       active_model_serializers (~> 0.10.3)
       activerecord (>= 3.0)
       activesupport (>= 3.0)
@@ -81,7 +81,7 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     pg (0.19.0)
-    rack (2.0.4)
+    rack (2.0.5)
     rack-cors (1.0.2)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
