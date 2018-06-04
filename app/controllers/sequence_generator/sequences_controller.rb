@@ -25,6 +25,17 @@ module SequenceGenerator
       end
     end
 
+    def fetch
+      sequences = Sequence.where(scope: params[:branch_id], purpose: params[:purpose])
+      if sequences.present?
+        render json: sequences, root: sequences, status: :ok
+      else
+        api_error(status: :unprocessable_entity,
+                  message: 'Sequences Not found'
+        )
+      end
+    end
+
     def index
         sequence = Sequence.where(purpose: params[:purpose], scope: params[:scope])
                            .where('valid_from <= ? AND valid_till >= ?', Time.now, Time.now).first

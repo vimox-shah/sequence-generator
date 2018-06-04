@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="537e9384-4419-4933-b4af-9f53b6cf4a58" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/concerns/act_as_sequenced.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concerns/act_as_sequenced.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sequence-generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sequence-generator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/sequence_generator/sequences_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sequence_generator/sequences_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -20,6 +22,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="sequences_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/sequence_generator/sequences_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="41" lean-forward="true" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cors.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/initializers/cors.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file leaf-file-name="sequence.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/sequence_generator/sequence.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -29,14 +54,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="act_as_sequenced.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="act_as_sequenced.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/concerns/act_as_sequenced.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="27" column="58" lean-forward="true" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+              <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
               <folding>
                 <element signature="e#1971#4512#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="version.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/sequence_generator/version.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -62,12 +96,12 @@
         <option value="$PROJECT_DIR$/lib/sequence_generator/engine.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/serailizers/sequence_generator/sequence_serializer.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/models/sequence_generator/sequence.rb" />
         <option value="$PROJECT_DIR$/sequence_generator.gemspec" />
+        <option value="$PROJECT_DIR$/app/models/concerns/act_as_sequenced.rb" />
         <option value="$PROJECT_DIR$/lib/sequence_generator/version.rb" />
         <option value="$PROJECT_DIR$/app/controllers/sequence_generator/sequences_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/concerns/act_as_sequenced.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
       </list>
     </option>
   </component>
@@ -134,13 +168,13 @@
             <path>
               <item name="sequence-generator" type="b2602c69:ProjectViewProjectNode" />
               <item name="sequence-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sequence-generator" type="b2602c69:ProjectViewProjectNode" />
               <item name="sequence-generator" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="migrate" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="initializers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -151,10 +185,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="versio&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;vers&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;ver&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;routes&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/config/routes.rb&#10;gemspe&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/sequence_generator.gemspec&#10;gem&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/Gemfile&#10;act&#9;null&#9;null&#10;eng&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/engine.rb" />
+    <property name="SearchEverywhereHistoryKey" value="routes&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/config/routes.rb&#10;versio&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;vers&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;ver&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;gemspe&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/sequence_generator.gemspec&#10;gem&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/Gemfile&#10;act&#9;null&#9;null&#10;eng&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/engine.rb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/config/initializers" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -288,16 +328,15 @@
       <workItem from="1523537891965" duration="214000" />
       <workItem from="1524329944641" duration="417000" />
       <workItem from="1527006126480" duration="252000" />
-      <workItem from="1528117358384" duration="2135000" />
+      <workItem from="1528117358384" duration="2605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13691000" />
+    <option name="totallyTimeSpent" value="14161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2956381" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -391,10 +430,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sequence_generator.gemspec">
+    <entry file="file://$PROJECT_DIR$/app/models/concerns/act_as_sequenced.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="67" />
+        <state relative-caret-position="405">
+          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+          <folding>
+            <element signature="e#1971#4512#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -407,8 +449,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/sequence_generator/sequences_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" selection-start-line="28" selection-end-line="28" selection-end-column="8" />
+        <state relative-caret-position="272">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -419,15 +461,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/concerns/act_as_sequenced.rb">
+    <entry file="file://$PROJECT_DIR$/config/initializers/active_model_serializers.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="58" lean-forward="true" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
-          <folding>
-            <element signature="e#1971#4512#0" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="41" lean-forward="true" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sequence_generator.gemspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/cors.rb">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
