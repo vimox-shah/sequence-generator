@@ -20,20 +20,26 @@
       <file leaf-file-name="sequences_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/sequence_generator/sequences_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-              <folding>
-                <element signature="e#823#3589#0" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="30" column="79" lean-forward="true" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <file leaf-file-name="active_model_serializers.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/initializers/active_model_serializers.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -97,9 +103,9 @@
         <option value="$PROJECT_DIR$/app/models/sequence_generator/sequence.rb" />
         <option value="$PROJECT_DIR$/sequence_generator.gemspec" />
         <option value="$PROJECT_DIR$/app/models/concerns/act_as_sequenced.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/sequence_generator/sequences_controller.rb" />
         <option value="$PROJECT_DIR$/lib/sequence_generator/version.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/sequence_generator/sequences_controller.rb" />
       </list>
     </option>
   </component>
@@ -166,7 +172,26 @@
             <path>
               <item name="sequence-generator" type="b2602c69:ProjectViewProjectNode" />
               <item name="sequence-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="serailizers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sequence-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sequence-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="serailizers" type="462c0819:PsiDirectoryNode" />
+              <item name="sequence_generator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sequence-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sequence-generator" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sequence-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sequence-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="initializers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sequence-generator" type="b2602c69:ProjectViewProjectNode" />
@@ -195,8 +220,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/config/initializers" />
+      <recent name="$PROJECT_DIR$/config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -331,12 +356,12 @@
       <workItem from="1523537891965" duration="214000" />
       <workItem from="1524329944641" duration="417000" />
       <workItem from="1527006126480" duration="252000" />
-      <workItem from="1528117358384" duration="3957000" />
+      <workItem from="1528117358384" duration="4262000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15513000" />
+    <option name="totallyTimeSpent" value="15818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -444,9 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/active_model_serializers.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/sequence_generator.gemspec">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -484,17 +506,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/sequence_generator/sequences_controller.rb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="e#823#3589#0" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/sequence_generator/sequences_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="30" column="79" lean-forward="true" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/active_model_serializers.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
