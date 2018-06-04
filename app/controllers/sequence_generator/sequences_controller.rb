@@ -28,7 +28,7 @@ module SequenceGenerator
     def index
       sequences = Sequence.where(scope: params[:branch_id], purpose: params[:purpose])
       if sequences.present?
-        render json: sequences, root: sequences, status: :ok
+        render json: sequences, each_erializer: SequenceSerializer, root: false, status: :ok
       else
         api_error(status: :unprocessable_entity,
                   message: 'Sequences Not found'
