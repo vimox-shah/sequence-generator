@@ -21,10 +21,11 @@ module SequenceGenerator
         unless defined?(sequenced_options)
           include SequenceGenerator::ActsAsSequenced::InstanceMethods
 
+          attr_accessor :sequence_generator_id
           mattr_accessor :sequenced_options, instance_accessor: false
           self.sequenced_options = []
         end
-        before_create :set_sequential_ids
+        before_validation :set_sequential_ids, on: :create
         options = DEFAULT_OPTIONS.merge(options)
         column_name = options[:column]
         purpose = options[:purpose]
@@ -44,45 +45,52 @@ module SequenceGenerator
     module InstanceMethods
       def set_sequential_ids
         self.class.base_class.sequenced_options.each do |options|
-          sequence = Sequence.where(purpose: options[:purpose], scope: send(options[:scope]))
+
+          if self.sequence_generator_id.present?
+            sequence = Sequence.find(sequence_generator_id)
+            assign_attributes(options[:column]=> sequence.generate_sequence_number)
+          else
+            sequence = Sequence.where(purpose: options[:purpose], scope: send(options[:scope]))
                            .where('valid_from <= ? AND valid_till >= ?', Time.now, Time.now).first
-          unless self.as_json[options[:column]].present?
-            if sequence
-              assign_attributes(options[:column]=> sequence.generate_sequence_number)
-            else
-              original_sequence = Sequence.where(purpose: options[:purpose], scope: send(options[:scope])).last
-              if original_sequence.nil?
-                errors.add(:sequential_id, 'Sequence is not created')
-              else
-                valid_from = original_sequence.valid_from
-                valid_till = original_sequence.valid_till
-                new_start_at = original_sequence.sequential_id
-                difference = (valid_till - valid_from).to_i
-                new_valid_from = Date.today
-                new_valid_till = new_valid_from + difference
-                if original_sequence.reset_from_next_year
-                  sequence = Sequence.create!(original_sequence.as_json.except('id', 'start_at',
-                                                                               'valid_from', 'valid_till',
-                                                                               'sequential_id',
-                                                                               'created_at', 'updated_at')
-                                                  .merge!(start_at: 1,
-                                                          valid_from: new_valid_from,
-                                                          valid_till: new_valid_till,
-                                                          sequential_id: 1))
-                else
-                  sequence = Sequence.create!(original_sequence.as_json.except('id', 'start_at',
-                                                                               'valid_from', 'valid_till',
-                                                                               'sequential_id',
-                                                                               'created_at', 'updated_at')
-                                                  .merge!(start_at: new_start_at,
-                                                          valid_from: new_valid_from,
-                                                          valid_till: new_valid_till,
-                                                          sequential_id: new_start_at))
-                end
+            unless self.as_json[options[:column]].present?
+              if sequence
                 assign_attributes(options[:column]=> sequence.generate_sequence_number)
+              else
+                original_sequence = Sequence.where(purpose: options[:purpose], scope: send(options[:scope])).last
+                if original_sequence.nil?
+                  errors.add(:sequential_id, 'Sequence is not created')
+                else
+                  valid_from = original_sequence.valid_from
+                  valid_till = original_sequence.valid_till
+                  new_start_at = original_sequence.sequential_id
+                  difference = (valid_till - valid_from).to_i
+                  new_valid_from = Date.today
+                  new_valid_till = new_valid_from + difference
+                  if original_sequence.reset_from_next_year
+                    sequence = Sequence.create!(original_sequence.as_json.except('id', 'start_at',
+                                                                                 'valid_from', 'valid_till',
+                                                                                 'sequential_id',
+                                                                                 'created_at', 'updated_at')
+                                                    .merge!(start_at: 1,
+                                                            valid_from: new_valid_from,
+                                                            valid_till: new_valid_till,
+                                                            sequential_id: 1))
+                  else
+                    sequence = Sequence.create!(original_sequence.as_json.except('id', 'start_at',
+                                                                                 'valid_from', 'valid_till',
+                                                                                 'sequential_id',
+                                                                                 'created_at', 'updated_at')
+                                                    .merge!(start_at: new_start_at,
+                                                            valid_from: new_valid_from,
+                                                            valid_till: new_valid_till,
+                                                            sequential_id: new_start_at))
+                  end
+                  assign_attributes(options[:column]=> sequence.generate_sequence_number)
+                end
               end
             end
           end
+
         end
       end
     end
