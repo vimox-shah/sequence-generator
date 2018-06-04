@@ -22,8 +22,8 @@
       <file leaf-file-name="act_as_sequenced.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/concerns/act_as_sequenced.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="50" column="48" lean-forward="true" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+            <state relative-caret-position="194">
+              <caret line="51" column="57" lean-forward="true" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -315,12 +315,12 @@
       <workItem from="1523537891965" duration="214000" />
       <workItem from="1524329944641" duration="417000" />
       <workItem from="1527006126480" duration="252000" />
-      <workItem from="1528117358384" duration="4774000" />
+      <workItem from="1528117358384" duration="5055000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16330000" />
+    <option name="totallyTimeSpent" value="16611000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -489,8 +489,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/concerns/act_as_sequenced.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="50" column="48" lean-forward="true" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+        <state relative-caret-position="194">
+          <caret line="51" column="57" lean-forward="true" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
         </state>
       </provider>
     </entry>

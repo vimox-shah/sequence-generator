@@ -49,8 +49,8 @@ module SequenceGenerator
           if self.sequence_generator_id.present?
             sequence = Sequence.find(sequence_generator_id)
             p sequence.scope.to_s, 'sadad'
-            p options[:scope].to_s, 'options scope'
-            if sequence.scope.to_s == options[:scope].to_s
+            p send(options[:scope]).to_s, 'options scope'
+            if sequence.scope.to_s == send(options[:scope]).to_s
               assign_attributes(options[:column]=> sequence.generate_sequence_number)
             else
               errors.add(:sequential_id, 'Sequence is not associated with your branch')
