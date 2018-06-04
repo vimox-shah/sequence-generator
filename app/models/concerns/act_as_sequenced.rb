@@ -48,7 +48,11 @@ module SequenceGenerator
 
           if self.sequence_generator_id.present?
             sequence = Sequence.find(sequence_generator_id)
-            assign_attributes(options[:column]=> sequence.generate_sequence_number)
+            if sequence.scope == options[:scope]
+              assign_attributes(options[:column]=> sequence.generate_sequence_number)
+            else
+              errors.add(:sequential_id, 'Sequence is not associated with your branch')
+            end
           else
             sequence = Sequence.where(purpose: options[:purpose], scope: send(options[:scope]))
                            .where('valid_from <= ? AND valid_till >= ?', Time.now, Time.now).first
