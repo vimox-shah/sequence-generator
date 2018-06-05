@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="537e9384-4419-4933-b4af-9f53b6cf4a58" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/concerns/act_as_sequenced.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concerns/act_as_sequenced.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/sequence_generator/sequence.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/sequence_generator/sequence.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/active_model_serializers.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/cors.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20180330090901_create_sequence_generator_sequences.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180330090901_create_sequence_generator_sequences.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/sequence_generator/version.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/sequence_generator/version.rb" afterDir="false" />
-    </list>
+    <list default="true" id="537e9384-4419-4933-b4af-9f53b6cf4a58" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -209,7 +198,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="routes&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/config/routes.rb&#10;versio&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;vers&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;ver&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;gemspe&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/sequence_generator.gemspec&#10;gem&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/Gemfile&#10;act&#9;null&#9;null&#10;eng&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/engine.rb" />
+    <property name="SearchEverywhereHistoryKey" value="ver&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;routes&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/config/routes.rb&#10;versio&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;vers&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;gemspe&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/sequence_generator.gemspec&#10;gem&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/Gemfile&#10;act&#9;null&#9;null&#10;eng&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/engine.rb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -353,12 +342,12 @@
       <workItem from="1524329944641" duration="417000" />
       <workItem from="1527006126480" duration="252000" />
       <workItem from="1528117358384" duration="5824000" />
-      <workItem from="1528171648939" duration="646000" />
+      <workItem from="1528171648939" duration="1025000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18026000" />
+    <option name="totallyTimeSpent" value="18405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
