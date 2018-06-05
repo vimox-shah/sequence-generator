@@ -12,6 +12,7 @@ class CreateSequenceGeneratorSequences < ActiveRecord::Migration[5.0]
       t.column :financial_year_start, :integer
       t.column :financial_year_end, :integer
       t.column :scope, :string
+      t.column :max_prefix_number, :string
 
       t.timestamps
     end

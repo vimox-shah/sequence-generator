@@ -10,7 +10,7 @@ module SequenceGenerator
     end
 
     def generate_sequence_number
-      sequence_number = "%06d" % (sequential_id + 1).to_s
+      sequence_number = "%0#{max_prefix_number}d" % (sequential_id + 1).to_s
       generated_sequential_id = "#{sequence_prefix}#{sequence_number}"
       self.update(sequential_id: sequential_id + 1)
       return generated_sequential_id
