@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="537e9384-4419-4933-b4af-9f53b6cf4a58" name="Default" comment="" />
+    <list default="true" id="537e9384-4419-4933-b4af-9f53b6cf4a58" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -35,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sequence.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sequence.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/sequence_generator/sequence.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -62,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="version.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="version.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/sequence_generator/version.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="15">
+              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -104,11 +106,11 @@
         <option value="$PROJECT_DIR$/app/controllers/sequence_generator/sequences_controller.rb" />
         <option value="$PROJECT_DIR$/config/puma.rb" />
         <option value="$PROJECT_DIR$/app/models/concerns/act_as_sequenced.rb" />
-        <option value="$PROJECT_DIR$/lib/sequence_generator/version.rb" />
         <option value="$PROJECT_DIR$/config/initializers/cors.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180330090901_create_sequence_generator_sequences.rb" />
         <option value="$PROJECT_DIR$/app/models/sequence_generator/sequence.rb" />
+        <option value="$PROJECT_DIR$/lib/sequence_generator/version.rb" />
       </list>
     </option>
   </component>
@@ -198,7 +200,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="ver&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;routes&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/config/routes.rb&#10;versio&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;vers&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;gemspe&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/sequence_generator.gemspec&#10;gem&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/Gemfile&#10;act&#9;null&#9;null&#10;eng&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/engine.rb" />
+    <property name="SearchEverywhereHistoryKey" value="vers&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;ver&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;routes&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/config/routes.rb&#10;versio&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/version.rb&#10;gemspe&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/sequence_generator.gemspec&#10;gem&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/Gemfile&#10;act&#9;null&#9;null&#10;eng&#9;FILE&#9;file:///Users/vimoxshah/Desktop/Vimox/projects/sequence-generator/lib/sequence_generator/engine.rb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -342,12 +344,12 @@
       <workItem from="1524329944641" duration="417000" />
       <workItem from="1527006126480" duration="252000" />
       <workItem from="1528117358384" duration="5824000" />
-      <workItem from="1528171648939" duration="1025000" />
+      <workItem from="1528171648939" duration="1478000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18405000" />
+    <option name="totallyTimeSpent" value="18858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -492,13 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/sequence_generator/version.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/cors.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -534,6 +529,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/sequence_generator/version.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
         </state>
       </provider>
     </entry>
