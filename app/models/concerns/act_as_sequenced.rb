@@ -25,7 +25,9 @@ module SequenceGenerator
           mattr_accessor :sequenced_options, instance_accessor: false
           self.sequenced_options = []
         end
-        before_validation :set_sequential_ids, on: :create
+        options[:validation_options] ||= {on: :create}
+        options[:validation_options][:on] ||= :create
+        before_validation :set_sequential_ids, options[:validation_options]
         options = DEFAULT_OPTIONS.merge(options)
         column_name = options[:column]
         purpose = options[:purpose]
@@ -44,7 +46,7 @@ module SequenceGenerator
 
     module InstanceMethods
       def set_sequential_ids
-        self.class.base_class.sequenced_options.each do |options|
+        self.class.sequenced_options.each do |options|
 
           if self.sequence_generator_id.present?
             sequence = Sequence.find(sequence_generator_id)
