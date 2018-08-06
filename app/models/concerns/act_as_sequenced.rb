@@ -48,6 +48,7 @@ module SequenceGenerator
       def set_sequential_ids
         self.class.sequenced_options.each do |options|
 
+          return if send(options[:column]).present?
           if self.sequence_generator_id.present?
             sequence = Sequence.find(sequence_generator_id)
             if sequence.scope.to_s == send(options[:scope]).to_s
