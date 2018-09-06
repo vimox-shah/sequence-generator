@@ -49,8 +49,9 @@ module SequenceGenerator
         self.class.sequenced_options.each do |options|
 
           return if send(options[:column]).present?
-          if self.sequence_generator_id.present?
-            sequence = Sequence.find(sequence_generator_id)
+          prefix_id = options[:prefix_column] ? self[options[:prefix_column]] : self.sequence_generator_id
+          if prefix_id.present?
+            sequence = Sequence.find(prefix_id)
             if sequence.scope.to_s == send(options[:scope]).to_s
               assign_attributes(options[:column]=> sequence.generate_sequence_number)
             else
