@@ -93,7 +93,7 @@ module SequenceGenerator
                                                             valid_till: new_valid_till,
                                                             sequential_id: new_start_at))
                   end
-                  assign_attributes(options[:column]=> sequence.generate_sequence_number)
+                  assign_attributes(options[:column] => sequence.generate_sequence_number)
                 end
               end
             end
