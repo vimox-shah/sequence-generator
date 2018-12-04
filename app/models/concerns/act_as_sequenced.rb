@@ -27,8 +27,10 @@ module SequenceGenerator
         end
         options[:validation_options] ||= {on: :create}
         options[:validation_options][:on] ||= :create
-        before_validation :set_sequential_ids, options[:validation_options]
         options = DEFAULT_OPTIONS.merge(options)
+        before_validation options[:validation_options] do
+          set_sequential_ids(options)
+        end
         column_name = options[:column]
         purpose = options[:purpose]
 
@@ -45,60 +47,56 @@ module SequenceGenerator
     end
 
     module InstanceMethods
-      def set_sequential_ids
-        self.class.sequenced_options.each do |options|
-
-          return if send(options[:column]).present?
-          prefix_id = options[:prefix_column] ? self[options[:prefix_column]] : self.sequence_generator_id
-          if prefix_id.present?
-            sequence = Sequence.find(prefix_id)
-            if sequence.scope.to_s == send(options[:scope]).to_s
+      def set_sequential_ids(options)
+        return if send(options[:column]).present?
+        prefix_id = options[:prefix_column] ? self[options[:prefix_column]] : self.sequence_generator_id
+        if prefix_id.present?
+          sequence = Sequence.find(prefix_id)
+          if sequence.scope.to_s == send(options[:scope]).to_s
+            assign_attributes(options[:column]=> sequence.generate_sequence_number)
+          else
+            errors.add(:sequential_id, 'Sequence is not associated with your branch')
+          end
+        else
+          sequence = Sequence.where(purpose: options[:purpose], scope: send(options[:scope]))
+                         .where('valid_from <= ? AND valid_till >= ?', Time.now, Time.now).first
+          unless self.as_json[options[:column]].present?
+            if sequence
               assign_attributes(options[:column]=> sequence.generate_sequence_number)
             else
-              errors.add(:sequential_id, 'Sequence is not associated with your branch')
-            end
-          else
-            sequence = Sequence.where(purpose: options[:purpose], scope: send(options[:scope]))
-                           .where('valid_from <= ? AND valid_till >= ?', Time.now, Time.now).first
-            unless self.as_json[options[:column]].present?
-              if sequence
-                assign_attributes(options[:column]=> sequence.generate_sequence_number)
+              original_sequence = Sequence.where(purpose: options[:purpose], scope: send(options[:scope])).last
+              if original_sequence.nil?
+                errors.add(:sequential_id, 'Sequence is not created')
               else
-                original_sequence = Sequence.where(purpose: options[:purpose], scope: send(options[:scope])).last
-                if original_sequence.nil?
-                  errors.add(:sequential_id, 'Sequence is not created')
+                valid_from = original_sequence.valid_from
+                valid_till = original_sequence.valid_till
+                new_start_at = original_sequence.sequential_id
+                difference = (valid_till - valid_from).to_i
+                new_valid_from = Date.today
+                new_valid_till = new_valid_from + difference
+                if original_sequence.reset_from_next_year
+                  sequence = Sequence.create!(original_sequence.as_json.except('id', 'start_at',
+                                                                               'valid_from', 'valid_till',
+                                                                               'sequential_id',
+                                                                               'created_at', 'updated_at')
+                                                  .merge!(start_at: 1,
+                                                          valid_from: new_valid_from,
+                                                          valid_till: new_valid_till,
+                                                          sequential_id: 1))
                 else
-                  valid_from = original_sequence.valid_from
-                  valid_till = original_sequence.valid_till
-                  new_start_at = original_sequence.sequential_id
-                  difference = (valid_till - valid_from).to_i
-                  new_valid_from = Date.today
-                  new_valid_till = new_valid_from + difference
-                  if original_sequence.reset_from_next_year
-                    sequence = Sequence.create!(original_sequence.as_json.except('id', 'start_at',
-                                                                                 'valid_from', 'valid_till',
-                                                                                 'sequential_id',
-                                                                                 'created_at', 'updated_at')
-                                                    .merge!(start_at: 1,
-                                                            valid_from: new_valid_from,
-                                                            valid_till: new_valid_till,
-                                                            sequential_id: 1))
-                  else
-                    sequence = Sequence.create!(original_sequence.as_json.except('id', 'start_at',
-                                                                                 'valid_from', 'valid_till',
-                                                                                 'sequential_id',
-                                                                                 'created_at', 'updated_at')
-                                                    .merge!(start_at: new_start_at,
-                                                            valid_from: new_valid_from,
-                                                            valid_till: new_valid_till,
-                                                            sequential_id: new_start_at))
-                  end
-                  assign_attributes(options[:column]=> sequence.generate_sequence_number)
+                  sequence = Sequence.create!(original_sequence.as_json.except('id', 'start_at',
+                                                                               'valid_from', 'valid_till',
+                                                                               'sequential_id',
+                                                                               'created_at', 'updated_at')
+                                                  .merge!(start_at: new_start_at,
+                                                          valid_from: new_valid_from,
+                                                          valid_till: new_valid_till,
+                                                          sequential_id: new_start_at))
                 end
+                assign_attributes(options[:column]=> sequence.generate_sequence_number)
               end
             end
           end
-
         end
       end
     end
