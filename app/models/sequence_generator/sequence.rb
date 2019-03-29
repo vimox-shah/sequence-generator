@@ -2,6 +2,7 @@ require_relative '../concerns/act_as_sequenced'
 module SequenceGenerator
   class Sequence < ApplicationRecord
     include SequenceGenerator::ActsAsSequenced
+    acts_as_paranoid
 
     before_validation :validate_sequential_id
 

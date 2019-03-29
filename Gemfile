@@ -13,5 +13,6 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 gem 'pg'
+gem 'acts_as_paranoid', '~> 0.6.0'
 
 
