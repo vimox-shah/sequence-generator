@@ -59,7 +59,7 @@ module SequenceGenerator
           end
         else
           sequence = Sequence.where(purpose: options[:purpose], scope: send(options[:scope]))
-                         .where('valid_from <= ? AND valid_till >= ?', Time.now, Time.now).first
+                         .where('valid_from <= ? AND valid_till >= ?', Time.now, Time.now).first.lock!
           unless self.as_json[options[:column]].present?
             if sequence
               assign_attributes(options[:column]=> sequence.generate_sequence_number)
