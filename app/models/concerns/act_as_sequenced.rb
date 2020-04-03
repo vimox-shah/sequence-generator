@@ -63,9 +63,10 @@ module SequenceGenerator
             date_to_consider = send(options[:date_column])
           end
           sequence = Sequence.where(purpose: options[:purpose], scope: send(options[:scope]))
-                         .where('valid_from <= ? AND valid_till >= ?', date_to_consider, date_to_consider).first.lock!
+                         .where('valid_from <= ? AND valid_till >= ?', date_to_consider, date_to_consider).first
           unless self.as_json[options[:column]].present?
             if sequence
+              sequence.lock!
               assign_attributes(options[:column]=> sequence.generate_sequence_number)
             else
               original_sequence = Sequence.where(purpose: options[:purpose], scope: send(options[:scope])).last
