@@ -58,10 +58,15 @@ module SequenceGenerator
             errors.add(:sequential_id, 'Sequence is not associated with your branch')
           end
         else
+          date_to_consider = Time.now
+          if options[:date_column] && send(options[:date_column])
+            date_to_consider = send(options[:date_column])
+          end
           sequence = Sequence.where(purpose: options[:purpose], scope: send(options[:scope]))
-                         .where('valid_from <= ? AND valid_till >= ?', Time.now, Time.now).first.lock!
+                         .where('valid_from <= ? AND valid_till >= ?', date_to_consider, date_to_consider).first
           unless self.as_json[options[:column]].present?
             if sequence
+              sequence.lock!
               assign_attributes(options[:column]=> sequence.generate_sequence_number)
             else
               original_sequence = Sequence.where(purpose: options[:purpose], scope: send(options[:scope])).last
